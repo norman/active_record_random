@@ -1,5 +1,4 @@
-ActiveRecordRandom
-==================
+= ActiveRecordRandom
 
 This plugin adds 
 
@@ -10,7 +9,9 @@ to all the default ActiveRecord adapters. This means you can do this:
   Post.find(:all, :order => :random, :limit => 10)
 
 and it will work for MySQL, SQLite or Postgres without having to change the
-query. It also works for named scopes.
+query. It also works for named scopes:
+
+  named_scope :randomized, :order => :random
 
 == Why?
 

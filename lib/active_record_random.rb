@@ -1,5 +1,7 @@
-module ActiveRecord
-  class Base
+# Adds :order => :random to ActiveRecord's adapters. See the README for more
+# info.
+module ActiveRecord #:nodoc:
+  class Base #:nodoc:
 
     private
 
@@ -17,8 +19,8 @@ module ActiveRecord
 
 end
 
-module ActiveRecord::ConnectionAdapters
-  class AbstractAdapter
+module ActiveRecord::ConnectionAdapters  #:nodoc:
+  class AbstractAdapter  #:nodoc:
     def order(order)
       case order
         when :random then "RANDOM()"
@@ -28,8 +30,8 @@ module ActiveRecord::ConnectionAdapters
   end
 end
 
-module ActiveRecord::ConnectionAdapters
-  class MysqlAdapter
+module ActiveRecord::ConnectionAdapters  #:nodoc:
+  class MysqlAdapter  #:nodoc:
     def order(order)
       case order
         when :random then "RAND()"
