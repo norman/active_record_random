@@ -1,0 +1,28 @@
+ActiveRecordRandom
+==================
+
+This plugin adds 
+
+  :order => :random 
+  
+to all the default ActiveRecord adapters. This means you can do this:
+
+  Post.find(:all, :order => :random, :limit => 10)
+
+and it will work for MySQL, SQLite or Postgres without having to change the
+query. It also works for named scopes.
+
+== Why?
+
+Because MySQL has a different syntax than Postgres and SQLite for ordering by
+random. If you develop or test on SQLite and then deploy on MySQL, this is
+annoying. This plugin solves the problem.
+
+== Shouldn't this be a patch to Rails?
+
+I {submitted it as a
+patch}[http://rails.lighthouseapp.com/projects/8994/tickets/1274-patch-add-support-for-order-random-in-queries],
+but I'm such a loser that nobody gave me a +1. So for now it's just a lowly
+plugin.
+
+Copyright (c) 2009 {Norman Clarke}[mailto:norman@randomba.org], released under the MIT license

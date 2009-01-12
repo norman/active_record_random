@@ -1,0 +1,13 @@
+*.log
+*.DS_Store
+*.sqlite3
+public/stylesheets/all.css
+public/javascripts/all.js
+script/sync.sh
+doc
+coverage
+tmp
+public/system
+db/seatwave.xml
+db/sphinx
+vendor/gems
